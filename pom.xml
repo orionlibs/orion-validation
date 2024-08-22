@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.orionlibs</groupId>
-    <artifactId>project-name</artifactId>
-    <version>0.0.1</version>
-    <name>name</name>
-    <description>description</description>
-    <url>https://github.com/orionlibs/project-name</url>
+    <artifactId>orion-validation</artifactId>
+    <version>1.0.0</version>
+    <name>Orion Validation</name>
+    <description>Java data validation library</description>
+    <url>https://github.com/orionlibs/orion-validation</url>
     
     
     <properties>
@@ -17,9 +17,9 @@
 
 
     <scm>
-        <url>https://github.com/orionlibs/project-name</url>
-        <connection>scm:git:https://github.com/orionlibs/project-name.git</connection>
-        <developerConnection>scm:git:ssh://github.com/orionlibs/project-name.git</developerConnection>
+        <url>https://github.com/orionlibs/orion-validation</url>
+        <connection>scm:git:https://github.com/orionlibs/orion-validation.git</connection>
+        <developerConnection>scm:git:ssh://github.com/orionlibs/orion-validation.git</developerConnection>
     </scm>
 
 
@@ -225,65 +225,25 @@
     </distributionManagement>
 
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.junit</groupId>
-                <artifactId>junit-bom</artifactId>
-                <version>5.10.2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-
     <dependencies>
+        <dependency>
+            <groupId>io.github.orionlibs</groupId>
+            <artifactId>orion-assert</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.github.orionlibs</groupId>
+            <artifactId>orion-reflection</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.32</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-suite-engine</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.25.3</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>5.4.0</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-inline</artifactId>
-            <version>5.2.0</version>
-        </dependency>
-        
-        
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.16.1</version>
         </dependency>
     </dependencies>
 </project>
